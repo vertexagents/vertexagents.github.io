@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Mail,
   Phone,
@@ -19,12 +20,36 @@ export function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    alert("Thank you for your inquiry! We will get back to you soon.");
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+
+    try {
+      await emailjs.send(
+        "service_e9lw71n",
+        "template_ud6go9a",
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+        },
+        "XGtaNr8LNniVd8-qD",
+      );
+
+      alert("Thank you! Your message has been sent.");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      alert("Failed to send message. Please try again.");
+    }
   };
 
   const handleChange = (
@@ -69,10 +94,10 @@ export function Contact() {
                   <div>
                     <div className="font-medium mb-1">Phone</div>
                     <a
-                      href="tel:+919876543210"
+                      href="tel:+919746309726"
                       className="text-brand-light hover:text-white"
                     >
-                      +91 98765 43210
+                      +91 9020676109
                     </a>
                   </div>
                 </div>
@@ -84,10 +109,10 @@ export function Contact() {
                   <div>
                     <div className="font-medium mb-1">Email</div>
                     <a
-                      href="mailto:hello@keraladigital.com"
+                      href="mailto:contact@vertexagents.net"
                       className="text-brand-light hover:text-white"
                     >
-                      hello@keraladigital.com
+                      contact@vertexagents.net
                     </a>
                   </div>
                 </div>
@@ -245,16 +270,21 @@ export function Contact() {
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all"
                 >
-                  <option value="">Select a service</option>
-                  <option value="web-development">Web Development</option>
-                  <option value="mobile-app">Mobile App Development</option>
-                  <option value="digital-marketing">Digital Marketing</option>
-                  <option value="seo">SEO Optimization</option>
-                  <option value="branding">Branding & Identity</option>
-                  <option value="performance-marketing">
+                  <option value="Web Development">Web Development</option>
+                  <option value="Mobile App Development">
+                    Mobile App Development
+                  </option>
+                  <option value="Digital Marketing">Digital Marketing</option>
+                  <option value="SEO Optimization">SEO Optimization</option>
+                  <option value="Branding & Identity">
+                    Branding & Identity
+                  </option>
+                  <option value="Performance Marketing">
                     Performance Marketing
                   </option>
-                  <option value="full-stack">Full-Stack Solutions</option>
+                  <option value="Full-Stack Solutions">
+                    Full-Stack Solutions
+                  </option>
                 </select>
               </div>
 
