@@ -1,5 +1,4 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import {
   Mail,
   Phone,
@@ -19,38 +18,6 @@ export function Contact() {
     service: "",
     message: "",
   });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    try {
-      await emailjs.send(
-        "service_e9lw71n",
-        "template_ud6go9a",
-        {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          service: formData.service,
-          message: formData.message,
-        },
-        "XGtaNr8LNniVd8-qD",
-      );
-
-      alert("Thank you! Your message has been sent.");
-
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("EmailJS error:", error);
-      alert("Failed to send message. Please try again.");
-    }
-  };
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -196,7 +163,26 @@ export function Contact() {
               Send Us a Message
             </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              action="https://formsubmit.co/agentsvertex@gmail.com"
+              method="POST"
+              className="space-y-6"
+            >
+              {/* FormSubmit config */}
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Contact Form Submission"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://vertexagents.github.io/#contact"
+              />
+              <input type="text" name="_honey" style={{ display: "none" }} />
+              <input type="hidden" name="_template" value="table" />
+
               <div>
                 <label
                   htmlFor="name"
