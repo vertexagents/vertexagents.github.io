@@ -172,7 +172,7 @@ export function Contact() {
               <input
                 type="hidden"
                 name="_subject"
-                value="New Contact Form Submission"
+                value="New Contact Form Submission - Vertex Agents"
               />
               <input type="hidden" name="_captcha" value="false" />
               <input
@@ -295,6 +295,7 @@ export function Contact() {
 
               <button
                 type="submit"
+                disabled={false}
                 className="w-full px-8 py-4 bg-brand-primary text-white rounded-lg hover:bg-brand-hover transition-colors flex items-center justify-center gap-2 group"
               >
                 Send Message
