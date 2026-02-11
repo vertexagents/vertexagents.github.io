@@ -313,7 +313,7 @@ export function Contact() {
             {/* Company Info */}
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold text-brand-primary mb-4">
-                Kerala Digital
+                Vertex Agents
               </h3>
               <p className="text-brand-dark mb-4">
                 Your trusted partner for comprehensive digital solutions. From
@@ -376,7 +376,7 @@ export function Contact() {
           {/* Copyright */}
           <div className="pt-8 border-t border-gray-200 text-center text-brand-dark">
             <p>
-              &copy; {new Date().getFullYear()} Kerala Digital. All rights
+              &copy; {new Date().getFullYear()} Vertex Agents. All rights
               reserved.
             </p>
           </div>
