@@ -10,6 +10,12 @@ function ThemeToggle({ theme, onToggle, isInNavbar = false, className = "" }) {
   const thumbShiftClass = isInNavbar ? "translate-x-7" : "translate-x-9";
   const activeIconSize = isInNavbar ? 13 : 15;
   const railIconSize = isInNavbar ? 11 : 13;
+  const moonRailClass = isLight
+    ? "text-vertex-muted opacity-100"
+    : "text-vertex-muted/35 opacity-0";
+  const sunRailClass = isLight
+    ? "text-vertex-gold/40 opacity-0"
+    : "text-vertex-gold opacity-100";
 
   return (
     // Render fixed in desktop and inline when mounted in the mobile navbar.
@@ -31,10 +37,16 @@ function ThemeToggle({ theme, onToggle, isInNavbar = false, className = "" }) {
           <FiMoon size={activeIconSize} />
         )}
       </span>
-      <span className="ml-1 text-vertex-muted">
+      <span
+        aria-hidden="true"
+        className={`ml-1 transition-opacity duration-200 ${moonRailClass}`}
+      >
         <FiMoon size={railIconSize} />
       </span>
-      <span className="ml-auto mr-1 text-vertex-gold">
+      <span
+        aria-hidden="true"
+        className={`ml-auto mr-1 transition-opacity duration-200 ${sunRailClass}`}
+      >
         <FiSun size={railIconSize} />
       </span>
     </button>
