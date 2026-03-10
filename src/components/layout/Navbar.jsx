@@ -109,7 +109,11 @@ function Navbar({
                 className="overflow-hidden md:hidden"
               >
                 <div
-                  className="mt-4 space-y-3 border-t border-vertex-line pt-4"
+                  className={`mt-4 space-y-3 rounded-2xl border px-4 py-4 shadow-panel backdrop-blur-2xl ${
+                    isLight
+                      ? "border-vertex-line/25 bg-white/75"
+                      : "border-vertex-line/25 bg-vertex-bgSoft/75"
+                  }`}
                   role="navigation"
                   aria-label="Mobile"
                 >
