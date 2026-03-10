@@ -1,5 +1,7 @@
 # Vertex Agents Website
 
+[![Deploy to GitHub Pages](https://github.com/vertexagents/vertexagents.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/vertexagents/vertexagents.github.io/actions/workflows/deploy.yml)
+
 Marketing website for Vertex Agents built with React, Vite, Tailwind CSS, and Framer Motion.
 
 ## Tech Stack
