@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">Poster Mockup 01</title>
+  <desc id="d">Promotional poster concept in warm gradient style.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1D232D"/>
+      <stop offset="100%" stop-color="#3D1F1B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="80" y="80" width="1040" height="640" rx="28" fill="none" stroke="#F6B35D" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="920" cy="250" r="140" fill="#FF6A3D" fill-opacity="0.25"/>
+  <text x="140" y="250" fill="#F8F8F8" font-family="Arial, sans-serif" font-size="84" font-weight="700">WEEKEND SALE</text>
+  <text x="140" y="330" fill="#D4D9E3" font-family="Arial, sans-serif" font-size="34">Bold poster campaign concept</text>
+  <rect x="140" y="430" width="300" height="74" rx="14" fill="#FF6A3D"/>
+  <text x="210" y="478" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="30" font-weight="700">SHOP NOW</text>
+</svg>

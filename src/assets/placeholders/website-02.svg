@@ -1,0 +1,16 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">Website Mockup 02</title>
+  <desc id="d">Service website concept with dark header.</desc>
+  <rect width="1200" height="800" fill="#111827"/>
+  <rect x="100" y="70" width="1000" height="660" rx="20" fill="#F8FAFC"/>
+  <rect x="100" y="70" width="1000" height="90" rx="20" fill="#1E293B"/>
+  <rect x="140" y="104" width="140" height="22" rx="6" fill="#FBBF24"/>
+  <rect x="700" y="104" width="90" height="16" rx="5" fill="#94A3B8"/>
+  <rect x="810" y="104" width="90" height="16" rx="5" fill="#94A3B8"/>
+  <rect x="920" y="98" width="140" height="30" rx="8" fill="#F97316"/>
+  <rect x="150" y="210" width="460" height="42" rx="8" fill="#0F172A"/>
+  <rect x="150" y="266" width="380" height="20" rx="6" fill="#64748B"/>
+  <rect x="150" y="300" width="350" height="20" rx="6" fill="#64748B"/>
+  <rect x="150" y="350" width="170" height="46" rx="10" fill="#F59E0B"/>
+  <rect x="660" y="210" width="360" height="420" rx="14" fill="#E2E8F0"/>
+</svg>

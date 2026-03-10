@@ -1,0 +1,11 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">Logo Mockup 02</title>
+  <desc id="d">Wordmark and emblem logo concept.</desc>
+  <rect width="1200" height="800" fill="#111827"/>
+  <g transform="translate(360 220)">
+    <circle cx="240" cy="170" r="150" fill="none" stroke="#F59E0B" stroke-width="14"/>
+    <path d="M150 235 C190 170, 290 170, 330 235" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M150 110 C190 170, 290 170, 330 110" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <text x="600" y="640" fill="#FFFFFF" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700">CASCADE LABS</text>
+</svg>

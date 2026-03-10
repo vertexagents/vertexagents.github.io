@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --vertex-bg: 15 17 21;
+    --vertex-bg-soft: 26 28 34;
+    --vertex-panel: 34 38 50;
+    --vertex-text: 245 245 245;
+    --vertex-muted: 167 172 184;
+    --vertex-gold: 200 164 106;
+    --vertex-gold-deep: 173 134 80;
+    --vertex-orange: 255 106 61;
+    --vertex-line: 255 255 255;
+    --vertex-grid: 255 255 255;
+    --vertex-glass-bg: 255 255 255;
+    color-scheme: dark;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .theme-light {
+    --vertex-bg: 247 249 252;
+    --vertex-bg-soft: 232 236 242;
+    --vertex-panel: 220 226 235;
+    --vertex-text: 18 23 32;
+    --vertex-muted: 80 91 108;
+    --vertex-gold: 176 135 78;
+    --vertex-gold-deep: 146 110 58;
+    --vertex-orange: 221 103 70;
+    --vertex-line: 57 73 97;
+    --vertex-grid: 24 34 48;
+    --vertex-glass-bg: 255 255 255;
+    color-scheme: light;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: rgb(var(--vertex-bg));
+    color: rgb(var(--vertex-text));
+    font-family: "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply py-20 sm:py-24;
+  }
+
+  .glass-panel {
+    @apply rounded-2xl border border-vertex-line/20 backdrop-blur-xl shadow-panel;
+    background-color: rgb(var(--vertex-glass-bg) / 0.06);
+  }
+
+  .warm-divider {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-vertex-gold/40 to-transparent;
+  }
+
+  .cta-ambient-motion {
+    background-image:
+      radial-gradient(
+        ellipse 72% 58% at 20% 16%,
+        rgb(var(--vertex-orange) / 0.2) 0%,
+        rgb(var(--vertex-orange) / 0.14) 26%,
+        rgb(var(--vertex-orange) / 0.08) 46%,
+        transparent 74%
+      ),
+      radial-gradient(
+        ellipse 68% 54% at 82% 82%,
+        rgb(var(--vertex-gold) / 0.16) 0%,
+        rgb(var(--vertex-gold) / 0.11) 34%,
+        rgb(var(--vertex-gold) / 0.06) 52%,
+        transparent 76%
+      ),
+      linear-gradient(
+        115deg,
+        transparent 18%,
+        rgb(var(--vertex-orange) / 0.06) 48%,
+        transparent 78%
+      );
+    background-size:
+      155% 150%,
+      145% 142%,
+      170% 170%;
+    background-repeat: no-repeat;
+    filter: blur(22px);
+    opacity: 0.92;
+    animation: cta-circulate-360 9s linear infinite;
+    will-change: background-position;
+  }
+}
+
+@keyframes cta-circulate-360 {
+  0% {
+    background-position:
+      8% 50%,
+      92% 50%,
+      30% 30%;
+  }
+
+  12.5% {
+    background-position:
+      18% 22%,
+      82% 78%,
+      40% 18%;
+  }
+
+  25% {
+    background-position:
+      50% 8%,
+      50% 92%,
+      54% 12%;
+  }
+
+  37.5% {
+    background-position:
+      82% 22%,
+      18% 78%,
+      72% 20%;
+  }
+
+  50% {
+    background-position:
+      92% 50%,
+      8% 50%,
+      84% 36%;
+  }
+
+  62.5% {
+    background-position:
+      82% 78%,
+      18% 22%,
+      76% 62%;
+  }
+
+  75% {
+    background-position:
+      50% 92%,
+      50% 8%,
+      56% 82%;
+  }
+
+  87.5% {
+    background-position:
+      18% 78%,
+      82% 22%,
+      34% 74%;
+  }
+
+  100% {
+    background-position:
+      8% 50%,
+      92% 50%,
+      30% 30%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-ambient-motion {
+    animation: none;
+  }
+}
+
+@layer utilities {
+  .bg-grid-mask {
+    background-image:
+      linear-gradient(rgb(var(--vertex-grid) / 0.06) 1px, transparent 1px),
+      linear-gradient(
+        90deg,
+        rgb(var(--vertex-grid) / 0.06) 1px,
+        transparent 1px
+      );
+    background-size: 36px 36px;
+    mask-image: radial-gradient(circle at center, black 35%, transparent 92%);
+  }
+
+  .text-gradient-warm {
+    background: linear-gradient(
+      120deg,
+      rgb(var(--vertex-text)) 0%,
+      rgb(var(--vertex-gold)) 35%,
+      rgb(var(--vertex-orange)) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

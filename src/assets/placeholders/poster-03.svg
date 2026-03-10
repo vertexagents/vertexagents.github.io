@@ -1,0 +1,12 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">Poster Mockup 03</title>
+  <desc id="d">Conference poster concept.</desc>
+  <rect width="1200" height="800" fill="#17212B"/>
+  <rect x="0" y="0" width="1200" height="230" fill="#FF6A3D" fill-opacity="0.12"/>
+  <rect x="80" y="70" width="1040" height="660" rx="24" fill="none" stroke="#E5E7EB" stroke-opacity="0.45" stroke-width="3"/>
+  <text x="140" y="220" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="36">INDUSTRY SUMMIT</text>
+  <text x="140" y="340" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="112" font-weight="700">2026</text>
+  <text x="140" y="420" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="30">Poster concept for keynote announcement</text>
+  <rect x="140" y="490" width="360" height="68" rx="12" fill="#F59E0B"/>
+  <text x="230" y="534" fill="#111827" font-family="Arial, sans-serif" font-size="30" font-weight="700">REGISTER</text>
+</svg>
